@@ -1,5 +1,3 @@
 name: Jonathan M. Smith
 email: jonathan.m.smith@temple.edu
-blurb: Data is fun particularly when connected 
-to chemistry. Enjoy hiking, biking, and 
-nordic skiing
+blurb: Data is fun particularly when connected to chemistry. Enjoy hiking, biking, and nordic skiing

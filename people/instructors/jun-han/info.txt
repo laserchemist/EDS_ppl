@@ -1,0 +1,3 @@
+name: Jun Han
+email: jun.han@temple.edu
+blurb: Associate Professor of Instruction
