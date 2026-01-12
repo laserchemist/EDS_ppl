@@ -11,6 +11,11 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 150px; /* Account for sticky header */
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -40,8 +45,8 @@
         
         .nav-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            flex-direction: column;
+            gap: 12px;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 2px solid #f0f0f0;
@@ -58,6 +63,7 @@
             font-weight: 600;
             color: #666;
             font-size: 0.9em;
+            margin-right: 5px;
         }
         
         .nav-link {
@@ -93,6 +99,7 @@
         
         section {
             margin-bottom: 60px;
+            scroll-margin-top: 150px; /* Extra space for sticky header */
         }
         
         h2 {
@@ -186,15 +193,12 @@
                 font-size: 1.5em;
             }
             
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
+            html {
+                scroll-padding-top: 180px;
             }
             
-            .nav-section {
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
+            section {
+                scroll-margin-top: 180px;
             }
             
             .calendar-iframe {
