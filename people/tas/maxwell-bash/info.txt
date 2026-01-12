@@ -1,3 +1,3 @@
-name: 
-email: chloe.batz@temple.edu
-blurb: Hi! I’m Chloe Batz, a sophomore biology major at CST. Outside of university, I enjoy volunteering, working out, and traveling. Feel free to reach out if you have any questions, and I look forward to meeting you all!
+name: Maxwell Bash
+email: Maxwell.bash@temple.edu
+blurb: Hi, I’m Max Bash, a first year Bio major on the pre-med track. I love spending my free time composing and practicing music, alongside reading philosophy! Feel free to email me, I’m always here to help!
