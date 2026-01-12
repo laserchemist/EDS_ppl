@@ -1,3 +1,3 @@
 name: David Litwin
-Email: David.litwin@temple.edu
-Blurb: I’m an assistant professor of instruction in EES, particularly intereste in water. I’m also a musician and climber. 
+email: David.litwin@temple.edu
+blurb: I’m an assistant professor of instruction in EES, particularly intereste in water. I’m also a musician and climber. 
