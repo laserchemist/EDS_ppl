@@ -9,6 +9,10 @@ on:
       - 'template.html'
   workflow_dispatch:
 
+permissions:
+  contents: write  # Add this to allow pushing
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
