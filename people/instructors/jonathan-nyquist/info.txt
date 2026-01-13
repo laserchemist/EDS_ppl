@@ -1,0 +1,3 @@
+name: Jonathan Nyquist
+email: jonathan.nyquist@temple.edu
+blurb: Professor of Geophysics, Weeks Chair of Environmental Geology, https://sites.temple.edu/geophysics/ , NOTE: not teaching Elements of Data Science Spring 2026
