@@ -1,0 +1,3 @@
+name: Zachary Han
+email: zachary.han@temple.edu
+blurb: Hello, I am a second-year Chemistry major. My hobbies include worldbuilding, puzzle-solving, and ironic humor. I am at my happiest when I code in Python. I look forward to working with you all.
