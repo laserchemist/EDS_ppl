@@ -1,3 +1,3 @@
 name: Jonathan M. Smith
 email: jonathan.m.smith@temple.edu
-blurb: Data is fun particularly when connected to chemistry. Enjoy hiking, biking, and nordic skiing
+blurb: Professor of Instruction<br>Director of First Year Datascience<br>Data is <font color=green>fun</font> particularly when connected to chemistry. I enjoy hiking, biking, and nordic skiing. Always enjoy helping you understand how cool working and analyzing data can be after getting past challenges, come to office hours, ask a question in class, or email.<br>[https://sites.temple.edu/jmsmith/](https://sites.temple.edu/jmsmith/)
