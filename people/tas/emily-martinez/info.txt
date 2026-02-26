@@ -1,0 +1,3 @@
+name: Emily Martinez 
+email: emily.martinez0014@temple.edu
+blurb: Hi, I'm Emily! I am a Data Science major and a Sociology minor. I'm extremely passionate about asking interesting questions based on real human experiences and locating an answer through data analysis and machine learning! In my free time, I love to cook, bake, and do research in computing education. Feel free to reach out with any questions.
