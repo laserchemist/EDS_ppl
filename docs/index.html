@@ -10,124 +10,170 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --cherry: #A41E35;
+            --cherry-dark: #7A1626;
+            --black: #222222;
+            --silver: #A7A8AA;
+            --silver-light: #E7E7E8;
+            --white: #FFFFFF;
+        }
+
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 150px; /* Account for sticky header */
+            scroll-padding-top: 190px; /* Account for sticky header */
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--silver-light);
             min-height: 100vh;
         }
-        
+
         /* Header */
         .header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: var(--black);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.25);
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        
+
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 16px 20px;
         }
-        
-        h1 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 2em;
+
+        .brand-block {
+            background: linear-gradient(135deg, var(--cherry-dark), var(--cherry));
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin-bottom: 12px;
+            border: 1px solid var(--silver);
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px 14px;
         }
-        
+
+        .brand-title {
+            font-size: 1.5em;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .brand-sub {
+            color: var(--silver-light);
+            font-size: 1em;
+            font-weight: 600;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .nav-tabs { margin: 0 0 12px; }
+        .nav-tab {
+            display: inline-block;
+            padding: 7px 16px;
+            margin: 3px 6px 3px 0;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9em;
+            text-decoration: none;
+            border: 1px solid var(--silver);
+        }
+        .nav-tab.active { background: var(--cherry); color: var(--white); }
+        .nav-tab.inactive { background: transparent; color: var(--silver-light); }
+
         .nav-links {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 2px solid #f0f0f0;
+            padding-top: 12px;
+            border-top: 1px solid var(--silver);
         }
-        
+
         .nav-section {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             align-items: center;
         }
-        
+
         .nav-section-label {
             font-weight: 600;
-            color: #666;
-            font-size: 0.9em;
+            color: var(--silver-light);
+            font-size: 0.85em;
             margin-right: 5px;
         }
-        
+
         .nav-link {
             padding: 8px 16px;
-            background: #667eea;
-            color: white;
+            background: var(--cherry);
+            color: var(--white);
             text-decoration: none;
             border-radius: 6px;
             font-size: 0.9em;
+            border: 1px solid var(--silver);
             transition: all 0.2s;
         }
-        
+
         .nav-link:hover {
-            background: #764ba2;
+            background: var(--cherry-dark);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-        
+
         .nav-link.external {
-            background: #48bb78;
+            background: transparent;
+            color: var(--silver-light);
         }
-        
+
         .nav-link.external:hover {
-            background: #38a169;
+            background: var(--silver);
+            color: var(--black);
         }
-        
+
         /* Main Content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         section {
             margin-bottom: 60px;
-            scroll-margin-top: 150px; /* Extra space for sticky header */
+            scroll-margin-top: 190px; /* Extra space for sticky header */
         }
-        
+
         h2 {
-            color: white;
+            color: var(--cherry-dark);
             font-size: 2em;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        
+
         .people-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
         }
-        
+
         .person-card {
-            background: white;
+            background: var(--white);
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--silver-light);
             transition: all 0.3s;
         }
-        
+
         .person-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+            border-color: var(--silver);
         }
-        
+
         .person-photo {
             width: 150px;
             height: 150px;
@@ -135,72 +181,72 @@
             object-fit: cover;
             margin: 0 auto 20px;
             display: block;
-            border: 4px solid #667eea;
+            border: 4px solid var(--cherry);
         }
-        
+
         .person-name {
             font-size: 1.4em;
             font-weight: bold;
             margin-bottom: 8px;
-            color: #2d3748;
+            color: var(--black);
             text-align: center;
         }
-        
+
         .person-email {
-            color: #667eea;
+            color: var(--cherry-dark);
             text-decoration: none;
             margin-bottom: 15px;
             display: block;
             text-align: center;
             font-size: 0.95em;
         }
-        
+
         .person-email:hover {
             text-decoration: underline;
         }
-        
+
         .person-blurb {
             color: #4a5568;
             line-height: 1.6;
             font-size: 0.95em;
             text-align: center;
         }
-        
+
         /* Calendar Section */
         .calendar-section {
-            background: white;
+            background: var(--white);
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--silver-light);
         }
-        
+
         .calendar-section h2 {
-            color: #667eea;
-            text-shadow: none;
+            color: var(--cherry-dark);
             margin-bottom: 20px;
         }
-        
+
         .calendar-iframe {
             width: 100%;
             height: 800px;
             border: none;
             border-radius: 8px;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.5em;
+            .brand-title {
+                font-size: 1.25em;
             }
-            
+
             html {
-                scroll-padding-top: 180px;
+                scroll-padding-top: 230px;
             }
-            
+
             section {
-                scroll-margin-top: 180px;
+                scroll-margin-top: 230px;
             }
-            
+
             .calendar-iframe {
                 height: 600px;
             }
@@ -210,8 +256,17 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <h1>Elements of Data Science Course Staff</h1>
-            
+            <div class="brand-block">
+                <span class="brand-title">🦉 Elements of Data Science</span>
+                <span class="brand-sub">Course Staff &amp; Calendar</span>
+            </div>
+
+            <div class="nav-tabs">
+                <a class="nav-tab inactive" href="https://laserchemist.github.io/data/">🏠 Labs</a>
+                <a class="nav-tab inactive" href="https://laserchemist.github.io/data/Honors.html">🎓 Honors</a>
+                <a class="nav-tab active" href="https://laserchemist.github.io/EDS_ppl/">👥 Course Staff &amp; Calendar</a>
+            </div>
+
             <nav class="nav-links">
                 <div class="nav-section">
                     <span class="nav-section-label">On this page:</span>
@@ -219,17 +274,17 @@
                     <a href="#course-assistants" class="nav-link">Course Assistants</a>
                     <a href="#calendar" class="nav-link">Meeting Calendar</a>
                 </div>
-                
+
                 <div class="nav-section">
                     <span class="nav-section-label">Course resources:</span>
                     <a href="https://sites.temple.edu/data/" class="nav-link external" target="_blank">Course Site</a>
-                    <a href="https://laserchemist.github.io/dprimer/intro.html" class="nav-link external" target="_blank">Primer</a>
+                    <a href="https://laserchemist.github.io/dprimer/" class="nav-link external" target="_blank">Coding Data Science Primer</a>
                     <a href="https://inferentialthinking.com/chapters/intro.html" class="nav-link external" target="_blank">Textbook</a>
                 </div>
             </nav>
         </div>
     </header>
-    
+
     <div class="container">
         <section id="instructors">
             <h2>Instructors</h2>
@@ -239,40 +294,40 @@
                     <img src="images/instructors_david-litwin.jpg" alt="David Litwin" class="person-photo">
                     <div class="person-name">David Litwin</div>
                     <a href="mailto:David.litwin@temple.edu" class="person-email">David.litwin@temple.edu</a>
-                    <div class="person-blurb">I’m an assistant professor of instruction in EES, particularly intereste in water. I’m also a musician and climber.</div>
+                    <div class="person-blurb"><p>I’m an assistant professor of instruction in EES, particularly intereste in water. I’m also a musician and climber.</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/instructors_jonathan-smith.jpg" alt="Jonathan M. Smith" class="person-photo">
                     <div class="person-name">Jonathan M. Smith</div>
                     <a href="mailto:jonathan.m.smith@temple.edu" class="person-email">jonathan.m.smith@temple.edu</a>
-                    <div class="person-blurb">Professor of Instruction<br>Director of First Year Datascience<br>Data is <font color=green>fun</font> particularly when connected to chemistry. I enjoy hiking, biking, and nordic skiing. Always enjoy helping you understand how cool working and analyzing data can be after getting past challenges, come to office hours, ask a question in class, or email.<br>[https://sites.temple.edu/jmsmith/](https://sites.temple.edu/jmsmith/)</div>
+                    <div class="person-blurb"><p>Professor of Instruction<br>Director of First Year Datascience<br>Data is <font color=green>fun</font> particularly when connected to chemistry. I enjoy hiking, biking, and nordic skiing. Always enjoy helping you understand how cool working and analyzing data can be after getting past challenges, come to office hours, ask a question in class, or email.<br><a href="https://sites.temple.edu/jmsmith/">https://sites.temple.edu/jmsmith/</a></p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/instructors_jonathan-nyquist.jpg" alt="Jonathan Nyquist" class="person-photo">
                     <div class="person-name">Jonathan Nyquist</div>
                     <a href="mailto:jonathan.nyquist@temple.edu" class="person-email">jonathan.nyquist@temple.edu</a>
-                    <div class="person-blurb">Professor of Geophysics<br> Weeks Chair of Environmental Geology<br> [https://sites.temple.edu/geophysics/](https://sites.temple.edu/geophysics/) <br><font color=red> NOTE:</font> not teaching Elements of Data Science Spring 2026</div>
+                    <div class="person-blurb"><p>Professor of Geophysics<br> Weeks Chair of Environmental Geology<br> <a href="https://sites.temple.edu/geophysics/">https://sites.temple.edu/geophysics/</a> <br><font color=red> NOTE:</font> not teaching Elements of Data Science Spring 2026</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/instructors_jun-han.jpg" alt="Jun Han" class="person-photo">
                     <div class="person-name">Jun Han</div>
                     <a href="mailto:jun.han@temple.edu" class="person-email">jun.han@temple.edu</a>
-                    <div class="person-blurb">Data is the catalyst for smarter decisions. When I’m not analyzing numbers, I enjoy reading, singing, hiking, and listening to classical music.</div>
+                    <div class="person-blurb"><p>Data is the catalyst for smarter decisions. When I’m not analyzing numbers, I enjoy reading, singing, hiking, and listening to classical music.</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/instructors_kazi-tawhid-al-islam.jpg" alt="Kazi M Tawhid-Al-Islam" class="person-photo">
                     <div class="person-name">Kazi M Tawhid-Al-Islam</div>
                     <a href="mailto:kazi.tawhid@temple.edu" class="person-email">kazi.tawhid@temple.edu</a>
-                    <div class="person-blurb">I’m a Temple alumnus, having earned my PhD in Physics here. But before you picture me as Sheldon Cooper from The Big Bang Theory, let me stop you right there. I promise I’m far less likely to knock three times on your door.<br>My research interests lie primarily in Soft Condensed Matter, where I’ve worked with everything from crude oil and blood to liquid chocolate. (Yes, sometimes science really is delicious!)<br>And when I’m not on campus, you’ll usually find me in my garage, happily elbows‑deep in engine parts while trying to convince my car to love me back. After all, car engineering is really just physics with more grease.</div>
+                    <div class="person-blurb"><p>I’m a Temple alumnus, having earned my PhD in Physics here. But before you picture me as Sheldon Cooper from The Big Bang Theory, let me stop you right there. I promise I’m far less likely to knock three times on your door.<br>My research interests lie primarily in Soft Condensed Matter, where I’ve worked with everything from crude oil and blood to liquid chocolate. (Yes, sometimes science really is delicious!)<br>And when I’m not on campus, you’ll usually find me in my garage, happily elbows‑deep in engine parts while trying to convince my car to love me back. After all, car engineering is really just physics with more grease.</p></div>
                 </div>
                 
             </div>
         </section>
-        
+
         <section id="course-assistants">
             <h2>Course Assistants</h2>
             <div class="people-grid">
@@ -281,67 +336,67 @@
                     <img src="images/tas_chloe-batz.jpg" alt="Chloe Batz" class="person-photo">
                     <div class="person-name">Chloe Batz</div>
                     <a href="mailto:chloe.batz@temple.edu" class="person-email">chloe.batz@temple.edu</a>
-                    <div class="person-blurb">Hi! I’m Chloe Batz, a sophomore biology major at CST. Outside of university, I enjoy volunteering, working out, and traveling. Feel free to reach out if you have any questions, and I look forward to meeting you all!</div>
+                    <div class="person-blurb"><p>Hi! I’m Chloe Batz, a sophomore biology major at CST. Outside of university, I enjoy volunteering, working out, and traveling. Feel free to reach out if you have any questions, and I look forward to meeting you all!</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_emily-martinez.jpg" alt="Emily Martinez" class="person-photo">
                     <div class="person-name">Emily Martinez</div>
                     <a href="mailto:emily.martinez0014@temple.edu" class="person-email">emily.martinez0014@temple.edu</a>
-                    <div class="person-blurb">Hi, I'm Emily! I am a Data Science major and a Sociology minor. I'm extremely passionate about asking interesting questions based on real human experiences and locating an answer through data analysis and machine learning! In my free time, I love to cook, bake, and do research in computing education. Feel free to reach out with any questions.</div>
+                    <div class="person-blurb"><p>Hi, I'm Emily! I am a Data Science major and a Sociology minor. I'm extremely passionate about asking interesting questions based on real human experiences and locating an answer through data analysis and machine learning! In my free time, I love to cook, bake, and do research in computing education. Feel free to reach out with any questions.</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_jeni-sorathiya.jpg" alt="Jeni Sorathiya" class="person-photo">
                     <div class="person-name">Jeni Sorathiya</div>
                     <a href="mailto:jeni.sorathiya@temple.edu" class="person-email">jeni.sorathiya@temple.edu</a>
-                    <div class="person-blurb">I’m double majoring in Data Science and Cybersecurity. I’m also an international student.</div>
+                    <div class="person-blurb"><p>I’m double majoring in Data Science and Cybersecurity. I’m also an international student.</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_maxwell-bash.jpg" alt="Maxwell Bash" class="person-photo">
                     <div class="person-name">Maxwell Bash</div>
                     <a href="mailto:Maxwell.bash@temple.edu" class="person-email">Maxwell.bash@temple.edu</a>
-                    <div class="person-blurb">Hi, I’m Max Bash, a 3rd year Bio major on the pre-med track. I love spending my free time composing and practicing music, alongside reading philosophy! Feel free to email me, I’m always here to help!</div>
+                    <div class="person-blurb"><p>Hi, I’m Max Bash, a 3rd year Bio major on the pre-med track. I love spending my free time composing and practicing music, alongside reading philosophy! Feel free to email me, I’m always here to help!</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_mohammad-shahriar.jpg" alt="Mohammad Ahnaf Shahriar" class="person-photo">
                     <div class="person-name">Mohammad Ahnaf Shahriar</div>
                     <a href="mailto:mohammad.ahnaf.shahriar@temple.edu" class="person-email">mohammad.ahnaf.shahriar@temple.edu</a>
-                    <div class="person-blurb">Hi everyone! My name is Mohammad Ahnaf Shahriar. I’m a junior international student from Bangladesh majoring in Computer Science with a minor in Finance. I enjoy playing chess and watching stock prices go down—especially the ones I can’t afford yet, and trust me, that’s most of them. Feel free to reach out to me with classwork questions or if you need any guidance. I’m always happy to help!</div>
+                    <div class="person-blurb"><p>Hi everyone! My name is Mohammad Ahnaf Shahriar. I’m a junior international student from Bangladesh majoring in Computer Science with a minor in Finance. I enjoy playing chess and watching stock prices go down—especially the ones I can’t afford yet, and trust me, that’s most of them. Feel free to reach out to me with classwork questions or if you need any guidance. I’m always happy to help!</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_tyler-baugham.jpg" alt="Tyler Baughman" class="person-photo">
                     <div class="person-name">Tyler Baughman</div>
                     <a href="mailto:tyler.baughman@temple.edu" class="person-email">tyler.baughman@temple.edu</a>
-                    <div class="person-blurb">Hello, my name is Tyler Baughman. I am a Cybersecurity Major and I greatly enjoy things like 3d printing and coding. I work for the navy during the summer. I maker super hero suits and my favorite are the blue beetle and Batman!</div>
+                    <div class="person-blurb"><p>Hello, my name is Tyler Baughman. I am a Cybersecurity Major and I greatly enjoy things like 3d printing and coding. I work for the navy during the summer. I maker super hero suits and my favorite are the blue beetle and Batman!</p></div>
                 </div>
                 
                 <div class="person-card">
                     <img src="images/tas_zachary-han.jpg" alt="Zachary Han" class="person-photo">
                     <div class="person-name">Zachary Han</div>
                     <a href="mailto:zachary.han@temple.edu" class="person-email">zachary.han@temple.edu</a>
-                    <div class="person-blurb">Hello, I am a second-year Chemistry major. My hobbies include worldbuilding, puzzle-solving, and ironic humor. I am at my happiest when I code in Python. I look forward to working with you all.</div>
+                    <div class="person-blurb"><p>Hello, I am a second-year Chemistry major. My hobbies include worldbuilding, puzzle-solving, and ironic humor. I am at my happiest when I code in Python. I look forward to working with you all.</p></div>
                 </div>
                 
             </div>
         </section>
-        
+
         <section id="calendar" class="calendar-section">
             <h2>Meeting Calendar</h2>
-            <iframe 
+            <iframe
                 class="calendar-iframe"
-                src="https://outlook.office365.com/owa/calendar/007c6c4a53804ba0a990a552acd3f2e5@temple.edu/d88cff3341cf430b8cfc2e0eef834b0a14507711898720293564/calendar.html" 
+                src="https://outlook.office365.com/owa/calendar/007c6c4a53804ba0a990a552acd3f2e5@temple.edu/d88cff3341cf430b8cfc2e0eef834b0a14507711898720293564/calendar.html"
                 title="Office Hours Calendar"
                 scrolling="yes"
                 loading="lazy">
             </iframe>
             <p style="text-align: center; margin-top: 15px; color: #666;">
-                <a href="https://outlook.office365.com/owa/calendar/007c6c4a53804ba0a990a552acd3f2e5@temple.edu/d88cff3341cf430b8cfc2e0eef834b0a14507711898720293564/calendar.html" 
-                   target="_blank" 
-                   style="color: #667eea; text-decoration: none;">
+                <a href="https://outlook.office365.com/owa/calendar/007c6c4a53804ba0a990a552acd3f2e5@temple.edu/d88cff3341cf430b8cfc2e0eef834b0a14507711898720293564/calendar.html"
+                   target="_blank"
+                   style="color: #7A1626; text-decoration: none;">
                     Open calendar in new window →
                 </a>
             </p>
