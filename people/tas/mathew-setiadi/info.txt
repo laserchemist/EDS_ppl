@@ -1,0 +1,3 @@
+name: Mathew Setiadi
+email: matthewsetiadi@temple.edu
+blurb: Hi, I'm Matthew! I'm an accelerated B.S./M.S. program in Computational Data Science student, and I'm excited to be a course assistant for Elements of Data Science this semester. I grew up in Indonesia and studied in Taiwan before moving back to Philadelphia. I'm drawn to the intersection of data, business, and leadership, and I also lead youth, organize events, and manage media production for my church ministry. Looking forward to helping you all build strong data fluency this semester!
